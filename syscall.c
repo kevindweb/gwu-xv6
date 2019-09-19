@@ -97,6 +97,7 @@ extern int sys_unlink(void);
 extern int sys_wait(void);
 extern int sys_write(void);
 extern int sys_uptime(void);
+extern int sys_haw(void);
 
 static int (*syscalls[])(void) = {
   [SYS_fork] sys_fork,   [SYS_exit] sys_exit,     [SYS_wait] sys_wait,     [SYS_pipe] sys_pipe,
@@ -105,6 +106,7 @@ static int (*syscalls[])(void) = {
   [SYS_sleep] sys_sleep, [SYS_uptime] sys_uptime, [SYS_open] sys_open,     [SYS_write] sys_write,
   [SYS_mknod] sys_mknod, [SYS_unlink] sys_unlink, [SYS_link] sys_link,     [SYS_mkdir] sys_mkdir,
   [SYS_close] sys_close,
+  [SYS_haw] sys_haw,
 };
 
 void
